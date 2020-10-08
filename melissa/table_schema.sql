@@ -1,96 +1,97 @@
-﻿-- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
+-- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
 -- NOTE! If you have used non-SQL datatypes in your design, you will have to change these here.
 
 
-CREATE TABLE "Incomes" (
-    "state" VARCHAR(10)   NOT NULL,
-    "median_income" INT   NOT NULL,
-    "standard_error" INT   NOT NULL,
-    "year" INT   NOT NULL,
-    CONSTRAINT "pk_Incomes" PRIMARY KEY (
+CREATE TABLE "incomes" (
+    "state" VARCHAR(10),
+    "median_income" INT,
+    "standard_error" INT,
+    "year" INT,
+    CONSTRAINT "pk_incomes" PRIMARY KEY (
         "year"
      )
 );
 
-CREATE TABLE "Housing" (
-    "avg_sale_price" INT   NOT NULL,
-    "year" INT   NOT NULL,
-    CONSTRAINT "pk_Housing" PRIMARY KEY (
+CREATE TABLE "housing" (
+    "avg_sale_price" INT,
+    "year" INT,
+    CONSTRAINT "pk_housing" PRIMARY KEY (
         "year"
      )
 );
 
-CREATE TABLE "Rental_Pricing" (
-    "year" INT   NOT NULL,
-    "county" VARCHAR(30)   NOT NULL,
-    "studio" INT   NOT NULL,
-    "0_BR" INT   NOT NULL,
-    "2_BR" INT   NOT NULL,
-    "3_BR" INT   NOT NULL,
-    "4_BR" INT   NOT NULL,
-    "est_population" INT   NOT NULL,
-    CONSTRAINT "pk_Rental_Pricing" PRIMARY KEY (
+CREATE TABLE "rental_pricing" (
+    "year" INT,
+    "county" VARCHAR(30),
+    "studio" INT,
+    "0_BR" INT,
+    "2_BR" INT,
+    "3_BR" INT,
+    "4_BR" INT,
+    "est_population" INT,
+    CONSTRAINT "pk_rental_pricing" PRIMARY KEY (
         "year"
      )
 );
 
-CREATE TABLE "Homelessness" (
-    "year" INT   NOT NULL,
-    "state" VARCHAR(10)   NOT NULL,
-    "CoC_number" VARCHAR(30)   NOT NULL,
-    "CoC_name" VARCHAR(MAX)   NOT NULL,
-    "Homeless_Individuals" VARCHAR(MAX)   NOT NULL,
-    "Homeless_People_in_Families" VARCHAR(MAX)   NOT NULL,
-    "Sheltered_Chronically_Homeless_Individuals" VARCHAR(MAX)   NOT NULL,
-    "Sheltered_Homeless" VARCHAR(MAX)   NOT NULL,
-    "Sheltered_Homeless_Individuals" VARCHAR(MAX)   NOT NULL,
-    "Sheltered_Homeless_People_in_Families" VARCHAR(MAX)   NOT NULL,
-    "Total_Homeless" VARCHAR(MAX)   NOT NULL,
-    "Unsheltered_Chronically_Homeless_Individuals" VARCHAR(MAX)   NOT NULL,
-    "Unsheltered_Homeless" VARCHAR(MAX)   NOT NULL,
-    "Unsheltered_Homeless_Individuals" VARCHAR(MAX)   NOT NULL,
-    "Unsheltered_Homeless_People_in_Families" VARCHAR(MAX)   NOT NULL,
-    "Chronically_Homeless" VARCHAR(MAX)   NOT NULL,
-    "Chronically_Homeless_People_in_Families" VARCHAR(MAX)   NOT NULL,
-    "Homeless_Veterans" VARCHAR(MAX)   NOT NULL,
-    "Sheltered_Chronically_Homeless" VARCHAR(MAX)   NOT NULL,
-    "Sheltered_Chronically_Homeless_People_in_Families" VARCHAR(MAX)   NOT NULL,
-    "Sheltered_Homeless_Veterans" VARCHAR(MAX)   NOT NULL,
-    "Unsheltered_Chronically_Homeless" VARCHAR(MAX)   NOT NULL,
-    "Unsheltered_Chronically_Homeless_People_in_Families" VARCHAR(MAX)   NOT NULL,
-    "Unsheltered_Homeless_Veterans" VARCHAR(MAX)   NOT NULL,
-    "Children_of_Parenting_Youth" VARCHAR(MAX)   NOT NULL,
-    "Homeless_Unaccompanied_Children_(Under_18)" VARCHAR(MAX)   NOT NULL,
-    "Homeless_Unaccompanied_Young_Adults_(Age_18-24)" VARCHAR(MAX)   NOT NULL,
-    "Homeless_Unaccompanied_Youth_(Under_25)" VARCHAR(MAX)   NOT NULL,
-    "Parenting_Youth_(Under_25)" VARCHAR(MAX)   NOT NULL,
-    "Parenting_Youth_Age_18-24" VARCHAR(MAX)   NOT NULL,
-    "Parenting_Youth_Under_18" VARCHAR(MAX)   NOT NULL,
-    "Sheltered_Children_of_Parenting_Youth" VARCHAR(MAX)   NOT NULL,
-    "Sheltered_Homeless_Unaccompanied_Children_(Under_18)" VARCHAR(MAX)   NOT NULL,
-    "Sheltered_Homeless_Unaccompanied_Young_Adults_(Age_18-24)" VARCHAR(MAX)   NOT NULL,
-    "Sheltered_Homeless_Unaccompanied_Youth_(Under_25)" VARCHAR(MAX)   NOT NULL,
-    "Sheltered_Parenting_Youth_(Under_25)" VARCHAR(MAX)   NOT NULL,
-    "Sheltered_Parenting_Youth_Age_18-24" VARCHAR(MAX)   NOT NULL,
-    "Sheltered_Parenting_Youth_Under_18" VARCHAR(MAX)   NOT NULL,
-    "Unsheltered_Children_of_Parenting_Youth" VARCHAR(MAX)   NOT NULL,
-    "Unsheltered_Homeless_Unaccompanied_Children_(Under_18)" VARCHAR(MAX)   NOT NULL,
-    "Unsheltered_Homeless_Unaccompanied_Young_Adults_(Age_18-24)" VARCHAR(MAX)   NOT NULL,
-    "Unsheltered_Homeless_Unaccompanied_Youth_(Under_25)" VARCHAR(MAX)   NOT NULL,
-    "Unsheltered_Parenting_Youth_(Under_25)" VARCHAR(MAX)   NOT NULL,
-    "Unsheltered_Parenting_Youth_Age_18-24" VARCHAR(MAX)   NOT NULL,
-    "Unsheltered_Parenting_Youth_Under_18" VARCHAR(MAX)   NOT NULL,
-    CONSTRAINT "pk_Homelessness" PRIMARY KEY (
+CREATE TABLE "homelessness" (
+    "year" INT,
+    "state" VARCHAR(10),
+    "CoC_number" VARCHAR(30),
+    "CoC_name" VARCHAR(255),
+	"Chronically_Homeless_Individuals" VARCHAR(255),
+    "Homeless_Individuals" VARCHAR(255),
+    "Homeless_People_in_Families" VARCHAR(255),
+    "Sheltered_Chronically_Homeless_Individuals" VARCHAR(255),
+    "Sheltered_Homeless" VARCHAR(255),
+    "Sheltered_Homeless_Individuals" VARCHAR(255),
+    "Sheltered_Homeless_People_in_Families" VARCHAR(255),
+    "Total_Homeless" VARCHAR(255),
+    "Unsheltered_Chronically_Homeless_Individuals" VARCHAR(255),
+    "Unsheltered_Homeless" VARCHAR(255),
+    "Unsheltered_Homeless_Individuals" VARCHAR(255),
+    "Unsheltered_Homeless_People_in_Families" VARCHAR(255),
+    "Chronically_Homeless" VARCHAR(255),
+    "Chronically_Homeless_People_in_Families" VARCHAR(255),
+    "Homeless_Veterans" VARCHAR(255),
+    "Sheltered_Chronically_Homeless" VARCHAR(255),
+    "Sheltered_Chronically_Homeless_People_in_Families" VARCHAR(255),
+    "Sheltered_Homeless_Veterans" VARCHAR(255),
+    "Unsheltered_Chronically_Homeless" VARCHAR(255),
+    "Unsheltered_Chronically_Homeless_People_in_Families" VARCHAR(255),
+    "Unsheltered_Homeless_Veterans" VARCHAR(255),
+    "Children_of_Parenting_Youth" VARCHAR(255),
+    "Homeless_Unaccompanied_Children_(Under_18)" VARCHAR(255),
+    "Homeless_Unaccompanied_Young_Adults_(Age_18-24)" VARCHAR(255),
+    "Homeless_Unaccompanied_Youth_(Under_25)" VARCHAR(255),
+    "Parenting_Youth_(Under_25)" VARCHAR(255),
+    "Parenting_Youth_Age_18-24" VARCHAR(255),
+    "Parenting_Youth_Under_18" VARCHAR(255),
+    "Sheltered_Children_of_Parenting_Youth" VARCHAR(255),
+    "Sheltered_Homeless_Unaccompanied_Children_(Under_18)" VARCHAR(255),
+    "Sheltered_Homeless_Unaccompanied_Young_Adults_(Age_18-24)" VARCHAR(255),
+    "Sheltered_Homeless_Unaccompanied_Youth_(Under_25)" VARCHAR(255),
+    "Sheltered_Parenting_Youth_(Under_25)" VARCHAR(255),
+    "Sheltered_Parenting_Youth_Age_18-24" VARCHAR(255),
+    "Sheltered_Parenting_Youth_Under_18" VARCHAR(255),
+    "Unsheltered_Children_of_Parenting_Youth" VARCHAR(255),
+    "Unsheltered_Homeless_Unaccompanied_Children_(Under_18)" VARCHAR(255),
+    "Unsheltered_Homeless_Unaccompanied_Young_Adults_(Age_18-24)" VARCHAR(255),
+    "Unsheltered_Homeless_Unaccompanied_Youth_(Under_25)" VARCHAR(255),
+    "Unsheltered_Parenting_Youth_(Under_25)" VARCHAR(255),
+    "Unsheltered_Parenting_Youth_Age_18-24" VARCHAR(255),
+    "Unsheltered_Parenting_Youth_Under_18" VARCHAR(255),
+    CONSTRAINT "pk_homelessness" PRIMARY KEY (
         "year"
      )
 );
 
-ALTER TABLE "Incomes" ADD CONSTRAINT "fk_Incomes_year" FOREIGN KEY("year")
-REFERENCES "Homelessness" ("year");
+ALTER TABLE "incomes" ADD CONSTRAINT "fk_incomes_year" FOREIGN KEY("year")
+REFERENCES "homelessness" ("year");
 
-ALTER TABLE "Housing" ADD CONSTRAINT "fk_Housing_year" FOREIGN KEY("year")
-REFERENCES "Homelessness" ("year");
+ALTER TABLE "housing" ADD CONSTRAINT "fk_housing_year" FOREIGN KEY("year")
+REFERENCES "homelessness" ("year");
 
-ALTER TABLE "Rental_Pricing" ADD CONSTRAINT "fk_Rental_Pricing_year" FOREIGN KEY("year")
-REFERENCES "Homelessness" ("year");
+ALTER TABLE "rental_pricing" ADD CONSTRAINT "fk_rental_pricing_year" FOREIGN KEY("year")
+REFERENCES "homelessness" ("year");
 
