@@ -1,5 +1,7 @@
 ## Local Data ETL Project Outline
 
+The purpose of this project is to extract, transform, and load data in preparation for a future project. The data will be used for the Warehousing the Housing Crisis Repo. 
+
 * **Extraction**
 
   * Extracted data from multiple sources using different formats: 
@@ -7,10 +9,11 @@
     * Webscrapping
 
 * Where data is coming from: 
-* Median Income Florida - IRS
-* Avg Home Price in Florida - Zillow / MLS
-* Homelessness Rates in Florida - HUD
-* Median Rent Florida - Census Bureau 
+  * Median Income Florida - IRS
+  * Avg Home Price in Florida - Zillow / MLS
+  * Homelessness Rates in Florida - HUD
+  * Median Rent Florida - Census Bureau 
+  
 
 ![webscrapping](./images/webscrapping.png)
 
@@ -20,12 +23,19 @@
 
   * Identify keys to connect all data in SQLite.
 
+
+![pandas_pivot](./images/pandas_pivot.png)
+
+
 * **Load**
 
   * Create a connection to SQLite.
   * Confirm connection with query.
 
-## Contributions:
+![table_schema](./images/table_schema.png)
+
+
+## Contributions and Resources:
 
 Kristina - Median rental rates 2005-2015:
 https://www.rentdata.org/states/florida/2020
