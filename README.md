@@ -32,7 +32,7 @@ The purpose of this project is to extract, transform, and load data in preparati
   * Create a connection to SQLite.
   * Confirm connection with query.
 
-![table_schema](./images/table_schema.png)
+![schema](./images/schema.png)
 
 
 ## Contributions and Resources:

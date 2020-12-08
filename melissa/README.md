@@ -1,6 +1,41 @@
-# etl_housing_project
+## Local Data ETL Project Outline
 
-Project Outline
+The purpose of this project is to extract, transform, and load data in preparation for a future project. The data will be used for the Warehousing the Housing Crisis Repo. 
+
+* **Extraction**
+
+  * Extracted data from multiple sources using different formats: 
+    * CSV files
+    * Webscrapping
+
+* Where data is coming from: 
+  * Median Income Florida - IRS
+  * Avg Home Price in Florida - Zillow / MLS
+  * Homelessness Rates in Florida - HUD
+  * Median Rent Florida - Census Bureau 
+  
+
+![webscrapping](./images/webscrapping.png)
+
+* **Transform**
+
+  * Transform csv files by renaming columns, eliminating columns, and merging columns. 
+
+  * Identify keys to connect all data in SQLite.
+
+
+![pandas_pivot](./images/pandas_pivot.png)
+
+
+* **Load**
+
+  * Create a connection to SQLite.
+  * Confirm connection with query.
+
+![schema](./images/schema.png)
+
+
+## Contributions and Resources:
 
 Kristina - Median rental rates 2005-2015:
 https://www.rentdata.org/states/florida/2020
@@ -14,24 +49,3 @@ CSV/Excel Sheet procured from Zillows datawiz site
 https://www.zillow.com/research/data/
 Median income Florida 2005-2015
 https://www.census.gov/acs/www/data/data-tables-and-tools/data-profiles/2015/
-
-Where data is coming from: 
-Median Income Florida - IRS
-Avg Home Price in Florida - Zillow / MLS
-Homelessness Rates in Florida - HUD
-Median Rent Florida - Census Bureau 
-
-How much data will we use:
-Data should range from 2005-2015
-
-What questions is the Data going to answer:
-1. What is the current availability of “affordable housing” in the state of Florida according to the criteria put in place by the Housing of Urban Development 2005-2015
-2. Can data scientists use this data?
-
-What is our Data model:
-We want to be able to search for a city and see the housing options available within a certain budget range. The range will be within the same HUD criteria.
-
-Relational database: Using PostgresSQL
-
-
-
